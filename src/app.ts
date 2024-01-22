@@ -24,3 +24,10 @@ function printId(id: string | number) {
         console.log(id.toUpperCase());
     }
 }
+
+function example(a: string | boolean, b: string | number | boolean) {
+    // ts est capable de comprendre qu'il y a deux types en commun
+
+    if (a === b) {
+    }
+}
