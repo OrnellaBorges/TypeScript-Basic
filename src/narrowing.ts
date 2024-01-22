@@ -1,6 +1,24 @@
+/* le Narrowing permet d'eliminer des cas et reduires les types possibles pour les variables */
+
+
+function print (id: string | number){
+    //ts devine que id est de type number
+    if(typeof id === "number"){
+        console.log((id*3).toString)
+    }else{
+        /* comme la première condition n'est pas remplie
+        ts détecte automatiquement que id sera de type string */
+        console.log(id.toUpperCase())
+    }
+}
+
+
+
+
 
 /*Vérification de type avec typeof :
-Vous pouvez utiliser typeof pour étroitement typer une variable en fonction de son type réel. */
+Vous pouvez utiliser typeof pour étroitement
+typer une variable en fonction de son type réel. */
 
 
 
@@ -15,8 +33,17 @@ function traiterValeur(valeur: string | number) {
 }
 
 
+function example2 (valeur1 : string | number, valeur2: string | boolean){
+    /* dans ce cas ts détecte les deux types en communs naturellement */
+ if (valeur1 === valeur2){
+
+ }
+}
+
+
 /*Vérification de type avec instanceof :
-L'opérateur instanceof permet de vérifier si un objet est une instance d'une classe. */
+L'opérateur instanceof permet de 
+vérifier si un objet est une instance d'une classe. */
 
 class Animal {
     manger() {

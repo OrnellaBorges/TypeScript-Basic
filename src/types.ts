@@ -30,7 +30,7 @@ const guestStar: { firstname: string; [key: string]: string } = {
 
 /*types spécifiques */
 
-const date: Date = new Date();
+<//const date: Date = new Date();
 
 /*types Fonctions */
 
